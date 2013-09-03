@@ -16,7 +16,7 @@
 package com.ilyagubarev.designpatterns.creational.prototype;
 
 /**
- * Abstract implementation of supposed to be creation-expensive products family.
+ * Common implementation of supposed to be creation-expensive products family.
  *
  * @see Cloneable
  *
@@ -28,7 +28,7 @@ public abstract class Product implements Cloneable {
 
     private int _value;
 
-    protected Product(int value) {
+    Product(int value) {
         _value = value;
     }
 

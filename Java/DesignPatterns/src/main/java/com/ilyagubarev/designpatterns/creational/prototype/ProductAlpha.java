@@ -16,39 +16,22 @@
 package com.ilyagubarev.designpatterns.creational.prototype;
 
 /**
- * Alpha implementation of ExpensiveProduct.
+ * Alpha implementation of Product.
  *
- * @see ExpensiveProduct
+ * @see Product
  *
  * @version 1.01, 03 September 2013
  * @since 03 September 2013
  * @author Ilya Gubarev
  */
-public final class ProductAlpha implements ExpensiveProduct {
+public final class ProductAlpha extends Product {
 
-    /**
-     * Creates a new instance of ProductAlpha.
-     *
-     * @param value a product value.
-     * @return a new instance of ProductAlpha.
-     */
-    public static ProductAlpha create(String value) {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        return new ProductAlpha(value);
-    }
-
-    private String _value;
-
-    private ProductAlpha(String value) {
-        _value = value;
+    ProductAlpha(int value) {
+        super(value);
     }
 
     @Override
     public String toString() {
-        return String.format("[Alpha product: %s]", _value);
+        return String.format("[Alpha product: %d]", getValue());
     }
 }

@@ -15,37 +15,22 @@
  */
 package com.ilyagubarev.designpatterns.creational.prototype;
 
-import java.util.UUID;
-
 /**
  * Unique and expensive-to-create product family. If such a product is
  * being cloned its identifier should be still unique.
  *
- * @see ExpensiveProduct
+ * @see Product
  *
  * @version 1.01, 03 September 2013
  * @since 03 September 2013
  * @author Ilya Gubarev
  */
-public abstract class UniqueProduct implements ExpensiveProduct {
-
-    /**
-     * Generates a new UUID string to be used as a product identifier.
-     *
-     * @return a new UUID string.
-     */
-    public static String generateId() {
-        return UUID.randomUUID().toString();
-    }
+public abstract class UniqueProduct extends Product {
 
     private String _id;
 
-    /**
-     * Creates a new instance of UniqueProduct.
-     *
-     * @param id a product identifier.
-     */
-    public UniqueProduct(String id) {
+    UniqueProduct(String id, int value) {
+        super(value);
         _id = id;
     }
 
@@ -61,7 +46,7 @@ public abstract class UniqueProduct implements ExpensiveProduct {
     @Override
     protected Object clone() throws CloneNotSupportedException {
         UniqueProduct result = (UniqueProduct) super.clone();
-        result._id = generateId();
+        // ...
         return result;
     }
 }
