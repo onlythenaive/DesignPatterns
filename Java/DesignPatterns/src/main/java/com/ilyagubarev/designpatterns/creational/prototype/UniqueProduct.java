@@ -18,7 +18,8 @@ package com.ilyagubarev.designpatterns.creational.prototype;
 import java.util.UUID;
 
 /**
- * Family of unique and expensive products.
+ * Unique and expensive-to-create product family. If such a product is
+ * being cloned its identifier should be still unique.
  *
  * @see ExpensiveProduct
  *
@@ -29,9 +30,9 @@ import java.util.UUID;
 public abstract class UniqueProduct implements ExpensiveProduct {
 
     /**
-     * 
+     * Generates a new UUID string to be used as a product identifier.
      *
-     * @return 
+     * @return a new UUID string.
      */
     public static String generateId() {
         return UUID.randomUUID().toString();
@@ -40,18 +41,18 @@ public abstract class UniqueProduct implements ExpensiveProduct {
     private String _id;
 
     /**
-     * 
+     * Creates a new instance of UniqueProduct.
      *
-     * @param id 
+     * @param id a product identifier.
      */
     public UniqueProduct(String id) {
         _id = id;
     }
 
     /**
-     * 
+     * Gets an identifier of the product.
      *
-     * @return 
+     * @return a product identifier.
      */
     public String getId() {
         return _id;

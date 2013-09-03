@@ -16,7 +16,7 @@
 package com.ilyagubarev.designpatterns.creational.prototype;
 
 /**
- * Expensive-to-create products family.
+ * Expensive-to-create product family.
  *
  * @see Cloneable
  *
@@ -26,6 +26,6 @@ package com.ilyagubarev.designpatterns.creational.prototype;
  */
 public interface ExpensiveProduct extends Cloneable {
 
-    // This interface defines a common behaviour for a family
-    // of some products which supposed to be expensive to create.
+    // The interface defines a common behaviour for a family
+    // of some products which are supposed to be expensive to create.
 }
