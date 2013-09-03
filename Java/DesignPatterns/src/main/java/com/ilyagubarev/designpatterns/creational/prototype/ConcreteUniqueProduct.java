@@ -16,22 +16,24 @@
 package com.ilyagubarev.designpatterns.creational.prototype;
 
 /**
- * Alpha implementation of Product.
+ * Concrete implementation of UniqueProduct.
  *
- * @see Product
+ * @see UniqueProduct
  *
  * @version 1.01, 03 September 2013
  * @since 03 September 2013
  * @author Ilya Gubarev
  */
-final class ProductAlpha extends Product {
+final class ConcreteUniqueProduct extends UniqueProduct {
 
-    ProductAlpha(int value) {
-        super(value);
+    ConcreteUniqueProduct(String id, int value) {
+        super(id, value);
     }
 
     @Override
     public String toString() {
-        return String.format("[Alpha product: %d]", getValue());
+        String id = getId();
+        int value = getValue();
+        return String.format("[concrete unique product #%s: %d]", id, value);
     }
 }
