@@ -16,9 +16,41 @@
 package com.ilyagubarev.designpatterns.creational.builder;
 
 /**
+ * Product builder common interface.
  *
- * @author gubarev
+ * @version 1.01, 03 September 2013
+ * @since 03 September 2013
+ * @author Ilya Gubarev
  */
 public interface ProductBuilder {
 
+    /**
+     * Gets a new instance of Product.
+     *
+     * @return a new instance of Product.
+     *
+     * @see Product
+     */
+    Product getProduct();
+
+    /**
+     * Sets a new X-mark value.
+     *
+     * @param x X-mark value.
+     */
+    void setMarkX(int x);
+
+    /**
+     * Sets a new Y-mark value.
+     *
+     * @param y Y-mark value.
+     */
+    void setMarkY(int y);
+
+    /**
+     * Sets a new Z-mark value.
+     *
+     * @param z Z-mark value.
+     */
+    void setMarkZ(int z);
 }
