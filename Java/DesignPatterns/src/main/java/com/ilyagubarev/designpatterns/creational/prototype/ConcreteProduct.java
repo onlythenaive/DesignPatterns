@@ -16,7 +16,7 @@
 package com.ilyagubarev.designpatterns.creational.prototype;
 
 /**
- * Alpha implementation of Product.
+ * Concrete implementation of Product.
  *
  * @see Product
  *
@@ -24,14 +24,14 @@ package com.ilyagubarev.designpatterns.creational.prototype;
  * @since 03 September 2013
  * @author Ilya Gubarev
  */
-final class ProductAlpha extends Product {
+final class ConcreteProduct extends Product {
 
-    ProductAlpha(int value) {
+    ConcreteProduct(int value) {
         super(value);
     }
 
     @Override
     public String toString() {
-        return String.format("[Alpha product: %d]", getValue());
+        return String.format("[concrete product: %d]", getValue());
     }
 }
