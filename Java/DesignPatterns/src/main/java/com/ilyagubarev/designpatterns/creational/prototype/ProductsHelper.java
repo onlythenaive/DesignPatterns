@@ -27,7 +27,7 @@ import java.util.UUID;
 public final class ProductsHelper {
 
     /**
-     * Creates a new instance of Product.
+     * Creates a new instance of Product and emulates an expensive operation.
      *
      * @param value a product value.
      * @param unique true if an unique product is needed.
