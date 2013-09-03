@@ -44,7 +44,7 @@ public abstract class UniqueProduct extends Product {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         UniqueProduct result = (UniqueProduct) super.clone();
         _id = ProductsHelper.generateId();
         return result;

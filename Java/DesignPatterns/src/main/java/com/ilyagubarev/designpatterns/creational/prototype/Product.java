@@ -40,4 +40,9 @@ public abstract class Product implements Cloneable {
     public int getValue() {
         return _value;
     }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }
