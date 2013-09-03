@@ -26,12 +26,19 @@ package com.ilyagubarev.designpatterns.creational.factory;
  */
 final class ProductBeta implements Product {
 
-    public ProductBeta() {
+    private final String _id;
 
+    /**
+     * Creates a new instance of ProductBeta.
+     *
+     * @param id a product identifier.
+     */
+    public ProductBeta(String id) {
+        _id = id;
     }
 
     @Override
     public String toString() {
-        return "[Beta product]";
+        return String.format("[Beta product: %s]", _id);
     }
 }

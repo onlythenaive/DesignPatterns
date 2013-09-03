@@ -26,12 +26,19 @@ package com.ilyagubarev.designpatterns.creational.factory;
  */
 final class ProductAlpha implements Product {
 
-    public ProductAlpha() {
+    private final String _id;
 
+    /**
+     * Creates a new instance of ProductAlpha.
+     *
+     * @param id a product identifier.
+     */
+    public ProductAlpha(String id) {
+        _id = id;
     }
 
     @Override
     public String toString() {
-        return "[Alpha product]";
+        return String.format("[Alpha product: %s]", _id);
     }
 }
