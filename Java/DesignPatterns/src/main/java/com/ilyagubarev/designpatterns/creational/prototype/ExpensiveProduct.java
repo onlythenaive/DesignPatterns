@@ -16,12 +16,16 @@
 package com.ilyagubarev.designpatterns.creational.prototype;
 
 /**
- * Product common interface.
+ * Expensive-to-create products family.
+ *
+ * @see Cloneable
  *
  * @version 1.01, 03 September 2013
  * @since 03 September 2013
  * @author Ilya Gubarev
  */
-public interface Product extends Cloneable {
+public interface ExpensiveProduct extends Cloneable {
 
+    // This interface defines a common behaviour for a family
+    // of some products which supposed to be expensive to create.
 }
