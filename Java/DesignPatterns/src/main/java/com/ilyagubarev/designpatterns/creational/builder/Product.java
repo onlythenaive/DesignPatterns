@@ -16,9 +16,12 @@
 package com.ilyagubarev.designpatterns.creational.builder;
 
 /**
+ * Product common interface.
  *
- * @author gubarev
+ * @version 1.01, 03 September 2013
+ * @since 03 September 2013
+ * @author Ilya Gubarev
  */
-public interface ProductBuilder {
+public interface Product {
 
 }
