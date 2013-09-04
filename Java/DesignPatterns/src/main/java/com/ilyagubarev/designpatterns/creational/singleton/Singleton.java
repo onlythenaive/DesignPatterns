@@ -27,7 +27,7 @@ public final class Singleton {
     private static Singleton INSTANCE;
 
     /**
-     * Gets an instance of Singleton.
+     * Gets a guaranteed sole instance of Singleton.
      *
      * @return an instance of Singleton.
      */
