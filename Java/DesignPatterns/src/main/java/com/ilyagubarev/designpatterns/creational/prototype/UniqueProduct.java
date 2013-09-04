@@ -21,7 +21,7 @@ package com.ilyagubarev.designpatterns.creational.prototype;
  *
  * @see Product
  *
- * @version 1.01, 03 September 2013
+ * @version 1.02, 04 September 2013
  * @since 03 September 2013
  * @author Ilya Gubarev
  */
@@ -43,10 +43,7 @@ public abstract class UniqueProduct extends Product {
         return _id;
     }
 
-    @Override
-    public Object clone() throws CloneNotSupportedException {
-        UniqueProduct result = (UniqueProduct) super.clone();
-        _id = ProductsHelper.generateId();
-        return result;
+    void setId(String id) {
+        _id = id;
     }
 }

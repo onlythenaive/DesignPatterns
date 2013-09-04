@@ -20,7 +20,7 @@ import java.util.UUID;
 /**
  * Products service class.
  *
- * @version 1.01, 03 September 2013
+ * @version 1.02, 04 September 2013
  * @since 03 September 2013
  * @author Ilya Gubarev
  */
@@ -32,28 +32,42 @@ public final class ProductsHelper {
      * @param value a product value.
      * @param unique true if an unique product is needed.
      * @return a new instance of Product.
+     *
+     * @see Product
      */
-    public static Product createProduct(int value, boolean unique) {
+    public static Product create(int value, boolean unique) {
         Product result;
         if (unique) {
             result = new ConcreteUniqueProduct(generateId(), value);
         } else {
             result = new ConcreteProduct(value);
         }
-        delay();
         return result;
     }
 
-    static String generateId() {
-        return UUID.randomUUID().toString();
-    }
-
-    private static void delay() {
+    /**
+     * 
+     *
+     * @param product
+     * @return
+     *
+     * @see Product
+     */
+    public static Product copy(Product product) {
+        Product copied;
         try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
+            copied = (Product) product.clone();
+        } catch (CloneNotSupportedException e) {
             throw new RuntimeException(e);
         }
+        if (copied instanceof UniqueProduct) {
+            ((UniqueProduct) copied).setId(generateId());
+        }
+        return copied;
+    }
+
+    private static String generateId() {
+        return UUID.randomUUID().toString();
     }
 
     private ProductsHelper() {

@@ -20,7 +20,7 @@ package com.ilyagubarev.designpatterns.creational.prototype;
  *
  * @see Cloneable
  *
- * @version 1.01, 03 September 2013
+ * @version 1.02, 04 September 2013
  * @since 03 September 2013
  * @author Ilya Gubarev
  */
@@ -29,6 +29,7 @@ public abstract class Product implements Cloneable {
     private int _value;
 
     Product(int value) {
+        expensiveOperation();
         _value = value;
     }
 
@@ -42,7 +43,15 @@ public abstract class Product implements Cloneable {
     }
 
     @Override
-    public Object clone() throws CloneNotSupportedException {
+    protected Object clone() throws CloneNotSupportedException {
         return super.clone();
+    }
+
+    private void expensiveOperation() {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
