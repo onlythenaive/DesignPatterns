@@ -32,6 +32,27 @@ public interface Component {
     Iterable<Component> getChildren();
 
     /**
+     * Gets a parent component.
+     *
+     * @return parent component.
+     */
+    Component getParent();
+
+    /**
+     * Checks if the component has no children.
+     *
+     * @return true if the component has no children.
+     */
+    boolean isLeaf();
+
+    /**
+     * Checks if the component has no parent.
+     *
+     * @return true if the component has no parent.
+     */
+    boolean isRoot();
+
+    /**
      * Adds specified component to the children.
      *
      * @param component a component to add.
