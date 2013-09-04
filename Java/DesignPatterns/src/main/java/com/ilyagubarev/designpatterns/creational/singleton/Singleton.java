@@ -16,7 +16,7 @@
 package com.ilyagubarev.designpatterns.creational.singleton;
 
 /**
- * Singleton object type.
+ * Singleton object classic implementation.
  *
  * @version 1.01, 03 September 2013
  * @since 03 September 2013
