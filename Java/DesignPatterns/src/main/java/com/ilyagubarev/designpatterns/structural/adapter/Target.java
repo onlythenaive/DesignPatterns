@@ -25,7 +25,9 @@ package com.ilyagubarev.designpatterns.structural.adapter;
 public interface Target {
 
     /**
-     * Target method used by client.
+     * Gets a text info of the target.
+     *
+     * @return target text.
      */
-    public void targetMethod();
+    public String getText();
 }
