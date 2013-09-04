@@ -16,7 +16,7 @@
 package com.ilyagubarev.designpatterns.creational.prototype;
 
 /**
- * Common implementation of supposed to be creation-expensive products family.
+ * Family of creation-expensive products.
  *
  * @see Cloneable
  *

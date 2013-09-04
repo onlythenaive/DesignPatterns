@@ -27,7 +27,7 @@ import java.util.UUID;
 public final class ProductsHelper {
 
     /**
-     * Creates a new instance of Product and emulates an expensive operation.
+     * Creates a new instance of Product.
      *
      * @param value a product value.
      * @param unique true if an unique product is needed.
@@ -46,24 +46,24 @@ public final class ProductsHelper {
     }
 
     /**
-     * 
+     * Creates a copy of specified prototype Product.
      *
-     * @param product
-     * @return
+     * @param prototype a prototype Product to be copied.
+     * @return a new instance of of Product (prototype copy).
      *
      * @see Product
      */
-    public static Product copy(Product product) {
-        Product copied;
+    public static Product copy(Product prototype) {
+        Product result;
         try {
-            copied = (Product) product.clone();
+            result = (Product) prototype.clone();
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException(e);
         }
-        if (copied instanceof UniqueProduct) {
-            ((UniqueProduct) copied).setId(generateId());
+        if (result instanceof UniqueProduct) {
+            ((UniqueProduct) result).setId(generateId());
         }
-        return copied;
+        return result;
     }
 
     private static String generateId() {

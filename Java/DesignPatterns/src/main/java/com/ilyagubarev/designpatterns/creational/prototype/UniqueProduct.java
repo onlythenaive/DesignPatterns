@@ -16,8 +16,8 @@
 package com.ilyagubarev.designpatterns.creational.prototype;
 
 /**
- * Unique and expensive-to-create product family. If such a product is
- * being cloned its identifier should be still unique.
+ * Special subfamily of creation-expensive products: their identifiers
+ * should stay unique even if they have been cloned.
  *
  * @see Product
  *
