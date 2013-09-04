@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 gubarev.
+ * Copyright 2013 Ilya Gubarev.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,10 +15,44 @@
  */
 package com.ilyagubarev.designpatterns.structural.composite;
 
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
+ * Abstract composite component implementation.
  *
- * @author gubarev
+ * @see AbstractComponent
+ *
+ * @version 1.01, 04 September 2013
+ * @since 04 September 2013
+ * @author Ilya Gubarev
  */
-public class CompositeComponent {
-    
+public abstract class CompositeComponent extends AbstractComponent {
+
+    private List<Component> _children;
+
+    protected CompositeComponent() {
+        _children = new LinkedList<Component>();
+    }
+
+    @Override
+    public Iterable<Component> getChildren() {
+        return Collections.unmodifiableList(_children);
+    }
+
+    @Override
+    public boolean isLeaf() {
+        return false;
+    }
+
+    @Override
+    public void addChild(Component component) {
+        
+    }
+
+    @Override
+    public void removeChild(Component component) {
+        
+    }
 }
