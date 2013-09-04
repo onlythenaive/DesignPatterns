@@ -16,7 +16,7 @@
 package com.ilyagubarev.designpatterns.creational.factorymethod;
 
 /**
- * Beta sub class of SuperClass.
+ * Beta implementation of SuperClass.
  *
  * @see SuperClass
  *
