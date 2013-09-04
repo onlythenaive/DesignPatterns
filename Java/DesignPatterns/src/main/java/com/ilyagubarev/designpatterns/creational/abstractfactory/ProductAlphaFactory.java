@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ilyagubarev.designpatterns.creational.factory;
+package com.ilyagubarev.designpatterns.creational.abstractfactory;
 
 /**
  * Concrete ProductAlpha factory.

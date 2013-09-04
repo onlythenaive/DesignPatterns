@@ -13,40 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ilyagubarev.designpatterns.creational.factory;
+package com.ilyagubarev.designpatterns.creational.abstractfactory;
 
 /**
- * Concrete ProductBeta factory.
- *
- * @see Product
- * @see ProductFactory
+ * Product common interface.
  *
  * @version 1.01, 03 September 2013
  * @since 03 September 2013
  * @author Ilya Gubarev
  */
-public final class ProductBetaFactory extends ProductFactory {
+public interface Product {
 
-    private static ProductBetaFactory INSTANCE;
-
-    /**
-     * Gets a single instance of ProductBetaFactory.
-     *
-     * @return an instance of ProductBetaFactory.
-     */
-    public static ProductBetaFactory getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new ProductBetaFactory();
-        }
-        return INSTANCE;
-    }
-
-    private ProductBetaFactory() {
-
-    }
-
-    @Override
-    public Product create(String id) {
-        return new ProductBeta(id);
-    }    
 }

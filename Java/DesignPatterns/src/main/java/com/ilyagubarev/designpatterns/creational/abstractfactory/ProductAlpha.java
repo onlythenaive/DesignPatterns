@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ilyagubarev.designpatterns.creational.factory;
+package com.ilyagubarev.designpatterns.creational.abstractfactory;
 
 /**
- * Beta implementation of Product.
+ * Alpha implementation of Product.
  *
  * @see Product
  *
@@ -24,21 +24,21 @@ package com.ilyagubarev.designpatterns.creational.factory;
  * @since 03 September 2013
  * @author Ilya Gubarev
  */
-final class ProductBeta implements Product {
+final class ProductAlpha implements Product {
 
     private final String _id;
 
     /**
-     * Creates a new instance of ProductBeta.
+     * Creates a new instance of ProductAlpha.
      *
      * @param id a product identifier.
      */
-    public ProductBeta(String id) {
+    public ProductAlpha(String id) {
         _id = id;
     }
 
     @Override
     public String toString() {
-        return String.format("[Beta product: %s]", _id);
+        return String.format("[Alpha product: %s]", _id);
     }
 }
